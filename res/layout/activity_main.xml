@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+     android:background="#FFFF00"
+
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/editText_debit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView_debit"
+        android:layout_alignParentRight="true"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView_credit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView_debit"
+        android:layout_marginTop="43dp"
+        android:text="Crédit :"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editText_credit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView_credit"
+        android:layout_alignLeft="@+id/editText_debit"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView_debit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_credit"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:text="Débit :"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/button_debiter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_credit"
+        android:layout_below="@+id/textView_credit"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="26dp"
+        android:text="debiter 💸" />
+
+    <Button
+        android:id="@+id/button_crediter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_debiter"
+        android:layout_alignRight="@+id/editText_credit"
+        android:layout_marginRight="36dp"
+        android:text="crediter 💰" />
+
+
+
+<TextView
+    android:id="@+id/textView_caisse"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="64dp"
+    android:text="0 AR"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_caisse"
+        android:layout_marginTop="29dp"
+        android:layout_toLeftOf="@+id/button_debiter"
+        android:src="@drawable/ic_launcher" />  <!-- L'opacité de l'image est fixée à 50% -->
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_credit"
+        android:layout_alignTop="@+id/editText_credit"
+        android:src="@drawable/coin" />
+
+</RelativeLayout>
